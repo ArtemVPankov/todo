@@ -17,8 +17,21 @@ const AppHeader = () => {
 };
 
 const SearchPanel = () => {
+
+    const placeHolderText = 'search';
+    const searchStyle ={
+        fontSize: '25px',
+        color: 'blue'
+    }
+
+
     return (
-        <input type="text" placeholder="search"/>
+        <input type="text"
+               placeholder={placeHolderText}
+               className={['text-input']}
+               htmlFor="id"
+               style={searchStyle}
+        />
     )
 };
 
@@ -27,7 +40,7 @@ const App = () => {
         <div>
             <AppHeader/>
             <SearchPanel/>
-            <TodoList/>
+            <TodoList items={['item 1', 'item 2']} />
         </div>
     )
 };
