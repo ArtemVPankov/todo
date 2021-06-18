@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import TodoList from './components/todo-list';
 import SearchPanel from './components/search-panel';
 import AppHeader from './components/app-heaedr';
-
+import ItemStatusFilter from './components/item-status-filter';
 
 
 const App = () => {
@@ -15,13 +15,15 @@ const App = () => {
         {value: 'link 3', important: true, id: 3},
     ];
 
-    const loginBox = <span>Login please</span>
 
     return (
-        <div>
-            { loginBox }
-            <AppHeader/>
-            <SearchPanel/>
+        <div className="todo-app">
+            <AppHeader toDo={1} done={3} />
+            <div className="top-panel d-flex">
+                <SearchPanel />
+                <ItemStatusFilter />
+            </div>
+
             <TodoList data={ data } />
         </div>
     )
