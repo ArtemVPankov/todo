@@ -2,13 +2,21 @@ import React from 'react';
 import TodoListItem from './todo-list-item';
 
 
-const TodoList = () => {
+const TodoList = ( { data } ) => {
 
-    const items = ['task 1', 'task 2'];
+    const dataArr = data.map(( item ) => {
+        return (
+            <li>
+                <TodoListItem
+                    { ...item }
+                />
+            </li>
+        )
+    });
+
     return (
         <ul>
-            <li><TodoListItem value={ items[0] }/></li>
-            <li><TodoListItem value={ items[1] }/></li>
+            { dataArr }
         </ul>
     )
 };

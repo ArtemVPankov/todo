@@ -9,6 +9,12 @@ import AppHeader from './components/app-heaedr';
 
 const App = () => {
 
+    const data = [
+        {value: 'link 1', important: false},
+        {value: 'link 2', important: false},
+        {value: 'link 3', important: true},
+    ];
+
     const loginBox = <span>Login please</span>
 
     return (
@@ -16,7 +22,7 @@ const App = () => {
             { loginBox }
             <AppHeader/>
             <SearchPanel/>
-            <TodoList items={['item 1', 'item 2']} />
+            <TodoList data={ data } />
         </div>
     )
 };
