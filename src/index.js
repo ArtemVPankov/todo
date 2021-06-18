@@ -10,9 +10,9 @@ import AppHeader from './components/app-heaedr';
 const App = () => {
 
     const data = [
-        {value: 'link 1', important: false},
-        {value: 'link 2', important: false},
-        {value: 'link 3', important: true},
+        {value: 'link 1', important: false, id: 1},
+        {value: 'link 2', important: false, id: 2},
+        {value: 'link 3', important: true, id: 3},
     ];
 
     const loginBox = <span>Login please</span>

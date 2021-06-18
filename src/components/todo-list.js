@@ -6,7 +6,7 @@ const TodoList = ( { data } ) => {
 
     const dataArr = data.map(( item ) => {
         return (
-            <li>
+            <li key={ item.id }>
                 <TodoListItem
                     { ...item }
                 />
